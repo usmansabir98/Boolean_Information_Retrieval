@@ -1,0 +1,26 @@
+Here is another set of gold queries for your testing.
+
+Set -1 (verify with the set algebra)
+
+query = friend 
+17 documents
+query = soldier 
+5 documents 
+query= soldier OR friend 
+20 documents 
+query=soldier AND friend 
+2 documents. 
+
+Set -2 
+
+query=water 
+26 documents 
+query=travel 
+3 documents
+query= travel AND water 
+2 documents. 
+
+query= king AND queen 
+3 documents
+query = king OR queen
+8 documents
