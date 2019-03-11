@@ -29,7 +29,11 @@ class BooleanRetrieval():
             query = input("Enter query: ")
             self.pi.loadDocuments()
             self.pi.buildDictionary()
-            self.printOutput(query)
+            qb = QueryBuilder(query, positionalIndex = self.pi)
+            output = qb.executeQuery()
+            print(output)
+            if len(qb.transformQuery())==1:
+                self.printOutput(query)
             print("\n")
             
             
@@ -37,7 +41,7 @@ class BooleanRetrieval():
             query = input("Enter boolean query: ")
             self.ii.loadDocuments()
             self.ii.buildDictionary()
-            qb = QueryBuilder(self.ii, query)
+            qb = QueryBuilder(query, invertedIndex = self.ii)
             output = qb.executeQuery()
             print(output)
             print("\n")

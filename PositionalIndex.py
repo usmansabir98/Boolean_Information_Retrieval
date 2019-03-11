@@ -22,7 +22,7 @@ class PositionalIndex():
                     if(line != '\n'):
                         l = re.sub('[^a-zA-Z0-9\s]|[\n]', '', line)
                         l = self.stopWords.removeWords(l)
-                        s = s + line + " "
+                        s = s + l.lower() + " "
             lines = s.split(" ")
             self.collection.append(lines)
 
